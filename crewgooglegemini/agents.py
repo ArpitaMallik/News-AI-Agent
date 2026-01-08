@@ -7,9 +7,10 @@ from dotenv import load_dotenv
 load_dotenv()
 
 llm = LLM(
-    model="gemini-3-flash-preview",
+    model="gemini-2.5-flash"
+,
     provider="google",
-    api_key=os.getenv("GOOGLE_API_KEY"),
+    api_key=os.getenv("GEMINI_API_KEY"),
     temperature=0.5,
 )
 
@@ -17,7 +18,7 @@ news_researcher = Agent(
     role="Senior Researcher",
     goal="Uncover groundbreaking insights in technologies in {topic}",
     verbose=True,
-    memory=True,
+    memory=False,
     backstory=(
         "Driven by curiosity, you're at the forefront of innovation "
         "and eager to explore and share knowledge about the latest technological advancements."
@@ -31,7 +32,7 @@ news_writer = Agent(
     role="Writer",
     goal="Narrate compelling tech stories about {topic}",
     verbose=True,
-    memory=True,
+    memory=False,
     backstory=(
         "With a flair for simplifying complex topics, you craft "
         "engaging narratives that captivate and inform readers."
