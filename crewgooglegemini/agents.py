@@ -1,11 +1,13 @@
 from crewai import Agent
 from langchain_google_genai import ChatGoogleGenerativeAI
+from tools import tool
+import os
 
 from dotenv import load_dotenv
 load_dotenv()
 
 # call the gemini model
-llm = ChatGoogleGenerativeAI(model="",
+llm = ChatGoogleGenerativeAI(model="gemini-3-flash-preview",
                              verbose=True,
                              temperature=0.5,
                              google_api_key=os.getenv("GOOGLE_API_KEY"))
@@ -22,7 +24,7 @@ news_researcher=Agent(
         "Driven by curiosity, you're at the forefront of innovation"
         "and eager to explore and share knowledge about the latest technological advancements."
     ),
-    tools = [],
+    tools = [tool],
     llm=llm,
     allow_delegation=True
 )
@@ -38,7 +40,7 @@ news_writer=Agent(
         "With a flair for simplifying complex topics, you craft"
         "engaging narratives that captivate and inform readers about technological innovations."
     ),
-    tools = [],
+    tools = [tool],
     llm=llm,
     allow_delegation=False 
 )
