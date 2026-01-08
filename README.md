@@ -141,10 +141,9 @@ Suggested sections:
 
 Example:
 
-```
-![Home Screen](screenshots/home.png)
-![Generated Article](screenshots/article.png)
-```
+![Home Screen](images/1.png)
+![Generated Article](images/generated_article.png)
+
 
 ---
 
