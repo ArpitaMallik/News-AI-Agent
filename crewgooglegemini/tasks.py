@@ -3,7 +3,7 @@ from tools import tool
 from agents import news_researcher,news_writer
  
 
-research_task=Agent(
+research_task=Task(
     description=(
     "Identify the next big trend in {topic}."
     "Focus on identifying pros and cons and the overall narrative."
@@ -17,7 +17,7 @@ research_task=Agent(
 
 # create a writer agent with custom tools responsible in writing news blog
 
-write_task=Agent(
+write_task=Task(
     description=(
     "Compose an insightful article on {topic}."
     "Focus on the latest trends and how it's impacting the industry."
