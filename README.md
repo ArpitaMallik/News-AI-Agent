@@ -143,7 +143,8 @@ Example:
 
 ```
 ![Home Screen](images/1.png)
-![Generated Article](images/2.png)
+![Generated Article](images/generated_article.png)
+
 ```
 
 ---
