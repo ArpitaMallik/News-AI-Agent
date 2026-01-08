@@ -1,4 +1,5 @@
 crewai
 langchain_google_genai
-load_dotenv
+python-dotenv
 crewai-tools
+streamlit
